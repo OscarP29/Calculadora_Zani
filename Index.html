@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css.css">
+    <title>Calculadora Chula</title>
+</head>
+<body>
+    <div class="ContenedorCuernos">
+        <img src="Src/CuernoIzquierdo.png" alt="" width="120px" height="auto">
+        <img src="Src/CuernoDerecho.png" alt="" width="120px" height="auto">
+    </div>
+    <div class="ContenedorMadre">
+        <div class="ContenedorPantalla">
+            <div class="Pantalla">
+                <input type="text" id="operacion" disabled>
+            </div>
+            <div class="Resultado">
+                <img id="ImgError" src="Src/Error.png" alt="Error" width="200px" height="56px">
+                <input type="text" id="resultado" disabled>
+            </div>
+        </div>
+        <div class="ContenedorBotones">
+            <div class="FilaBotones">
+                <button class="BotonGrande BotonC" onclick="BotonReset()">C</button>
+                <button class="BotonNormal BotonDel" onclick="BotonBorrar()">DEL</button>
+                <button class="BotonNormal" onclick="Operacion('/')">/</button>
+            </div>
+            <div class="FilaBotones">
+                <button class="BotonNormal" onclick="NumeroBoton('1')">1</button>
+                <button class="BotonNormal" onclick="NumeroBoton('2')">2</button>
+                <button class="BotonNormal" onclick="NumeroBoton('3')">3</button>
+                <button class="BotonNormal" onclick="Operacion('*')">*</button>
+            </div>
+            <div class="FilaBotones">
+                <button class="BotonNormal" onclick="NumeroBoton('4')">4</button>
+                <button class="BotonNormal" onclick="NumeroBoton('5')">5</button>
+                <button class="BotonNormal" onclick="NumeroBoton('6')">6</button>
+                <button class="BotonNormal" onclick="Operacion('+')">+</button>
+            </div>
+            <div class="FilaBotones">
+                <button class="BotonNormal" onclick="NumeroBoton('7')">7</button>
+                <button class="BotonNormal" onclick="NumeroBoton('8')">8</button>
+                <button class="BotonNormal" onclick="NumeroBoton('9')">9</button>
+                <button class="BotonNormal" onclick="Operacion('-')">-</button>
+            </div>
+            <div class="FilaBotones">
+                <button class="BotonGrande BotonResultado" onclick="Calcular()">Resultado</button>
+                <button class="BotonNormal" onclick="NumeroBoton('0')">0</button>
+                <button class="BotonNormal" onclick="ComaBoton('.')">.</button>
+            </div>
+        </div>
+        
+</body>
+<script src="Js.js"></script>
+</html>

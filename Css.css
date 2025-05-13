@@ -1,0 +1,210 @@
+:root{
+    --ColorBordes: #ffff;
+
+    --ColorBotonC: #c93030;
+    --ColorLetraC: #ffffff;
+    --ColorBorderC: #cab665;
+    --ColorBotonCHover: #c0120c;
+    --ColorBorderCHover: #caaa28;
+
+    --ColorBotonDel: #362f27;
+    --ColorLetraDel: #ffffff;
+    --ColorBorderDel: #201815;
+
+    --ColorBotonResultado: #ddae5a;
+    --ColorLetraResultado: #ffffff;
+    --ColorBorderResultado: #997749;
+    --ColorBotonResultadoHover: #d19733;
+    --ColorBorderResultadoHover: #a17332;
+
+    --ColorBotonNormal: #f0f0f0;
+    --ColorLetraNormal: #000000;
+    --ColorBorderNormal: #9499a5;
+
+    --ColorContenedorBotones: #fcfdff;
+    --ColorContenedorPantalla: #efdea5;
+    --ColorLetrasPantalla: #885f29;
+
+    --ColorBordeMadre: #383530;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background-color: #fff;   
+    width: 100%;
+    height: 100vh;
+}
+.ContenedorCuernos{
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: -.4rem;
+}
+.ContenedorMadre{
+    min-width: 40%;
+    max-width: 80%;
+    height: 500px;
+    margin: 0 auto;    
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--ColorBordeMadre);
+    box-shadow: 10px 10px var(--ColorBordeMadre);
+    background-color: var(--ColorContenedorPantalla);
+    border-radius: 15px;
+}
+.ContenedorBotones{
+    width: 100%;
+    background-color: var(--ColorContenedorBotones);
+    padding: 0;
+    padding: 2rem 0 0 ;
+    height: 70%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.FilaBotones{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    
+}
+.BotonGrande{
+    flex-grow: 2;
+    padding: 1rem;
+    width: 140px;
+    margin: 0.4rem;
+    border-radius: 20px;
+}
+.BotonC{
+    border: 2px solid var(--ColorBorderC);
+    box-shadow: 3px 3px var(--ColorBorderC);
+    background-color: var(--ColorBotonC);
+    color: var(--ColorLetraC);
+}
+.BotonDel{
+    border: 2px solid var(--ColorBorderDel) !important;
+    box-shadow: 3px 3px var(--ColorBorderDel) !important;
+    background-color: var(--ColorBotonDel);
+    color: var(--ColorLetraDel);
+}
+.BotonResultado{
+    border: 2px solid var(--ColorBorderResultado);
+    box-shadow: 3px 3px var(--ColorBorderResultado);
+    background-color: var(--ColorBotonResultado);
+    color: var(--ColorLetraResultado);
+}
+.BotonNormal{
+    flex-grow: 1;
+    padding: 1rem;
+    width: 64px;
+    margin: 0.4rem;
+    border: 2px solid var(--ColorBorderNormal);
+    box-shadow: 3px 3px var(--ColorBorderNormal);
+    border-radius: 20px;
+}
+.ContenedorPantalla{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    
+}
+.Pantalla{
+    margin: 0;
+    padding: 0;
+    
+}
+.Pantalla input{
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    margin-right: 0.4rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: var(--ColorLetrasPantalla);
+    text-align: right;
+    border: none;
+}
+.Resultado{
+    margin-bottom: 0.5rem;
+    margin-right: 0.4rem;
+    display: flex;
+    flex-direction: column;
+}
+.Resultado input{
+    height: 50px;
+    width: 250px;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid var(--ColorLetrasPantalla);
+    color: var(--ColorLetrasPantalla);
+    text-align: right;
+    font-size: 2.5rem;
+    display: block;
+
+}
+#ImgError{
+    display: none;
+}
+
+.BotonNormal:hover{
+    background-color: var(--ColorBorderNormal);
+    border-color: var(--ColorBotonNormal);
+}
+.BotonNormal:active{
+    background-color: var(--ColorLetrasPantalla);
+    border-color: #fff;
+    color: #fff;
+    box-shadow: 1px 1px var(--ColorLetrasPantalla);
+    transform: translate(0.5px,0.5px);
+}
+.BotonDel:hover{
+    background-color: var(--ColorBorderDel) !important;
+    border-color: #fff !important;
+}
+.BotonDel:active{
+    color: var(--ColorBotonDel);
+    box-shadow: 1px 1px var(--ColorBorderDel)!important;
+    transform: translate(0.5px,0.5px);
+    color: #fff;
+    
+}
+.BotonC:hover{
+    background-color: var(--ColorBotonCHover);
+    border-color:#fff;
+    box-shadow: 3px 3px var(--ColorBorderCHover);
+} 
+.BotonC:active{
+    color: var(--ColorBotonC);
+    box-shadow: 1px 1px var(--ColorBorderC);
+    transform: translate(0.5px,0.5px);
+    color: #fff;
+}  
+.BotonResultado:hover{
+    background-color: var(--ColorBotonResultadoHover);
+    border-color: #fff;
+    box-shadow: 3px 3px var(--ColorBorderResultadoHover);
+}
+.BotonResultado:active{
+    color: var(--ColorBotonResultado);
+    box-shadow: 1px 1px var(--ColorBorderResultado);
+    transform: translate(0.5px,0.5px);
+    color: #fff;
+}
+@media (min-width: 1000px) {
+    body{
+        background-color: #ffffff;
+    }
+    .ContenedorMadre{
+        min-width: 20%;
+        max-width: 30%;
+    }
+    .Resultado input, .Pantalla input{
+        width: 200px;
+    }
+}
